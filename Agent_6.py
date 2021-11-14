@@ -98,7 +98,7 @@ def agent_6(grid, target, dim):
                 if (x,y)==(ni,nj): #Agent reached to maximum probability node
                     break
         
-        print(i,j)
+        #print(i,j)
         dis[i][j] = grid[i][j] #updating the discovered matrix
         
         if target == (i,j):
