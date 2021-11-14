@@ -120,16 +120,17 @@ def agent_6(grid, target, dim):
         
         
 
-grid,target = gen_grid(50)
-for x in grid:
-    print(x)
-print(target)
-result, parent = a_star(50,0.3,grid,0,0,target[0],target[1])
-if result!=False:
-    result, i, j, move, exam = agent_6(grid, target, 50)
-    print(target)
-print(i,j)
-for x in grid:
-    print(x)
-print("Move: ", move)
-print("Exam: ", exam)
+##grid,target = gen_grid(50)
+##for x in grid:
+##    print(x)
+##print(target)
+##result, parent = a_star(50,0.3,grid,0,0,target[0],target[1])
+##if result!=False:
+##    result, i, j, move, exam = agent_6(grid, target, 50)
+##    print(target)
+##print(i,j)
+##for x in grid:
+##    print(x)
+##print("Move: ", move)
+##print("Exam: ", exam)
+##
