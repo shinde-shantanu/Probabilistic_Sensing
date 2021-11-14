@@ -1,7 +1,7 @@
 from Grid import examine
-from Grid import gen_grid
 from A_Star import a_star
 import random
+import timeit
 
 def update_probability(p, pxy, fnr, dim): #Function to update probability for all Pi,j
     d = (1-pxy) + (pxy * fnr)
@@ -26,6 +26,8 @@ def find_path(parent, ti, tj, si, sj): #Return list of tuples as path
     return(path)
 
 def agent_6(grid, target, dim):
+
+    start = timeit.default_timer() #recording time stamp to measure run time
 
     nb = int(0.3 * ((dim * dim)-1))
     nf = int(((dim*dim)-nb)/3)
@@ -107,7 +109,7 @@ def agent_6(grid, target, dim):
             t = 0
         exam = exam + 1 #Updating count of examinations
         if examine(grid[i][j],t) == 1: #Examining the current cell
-            return(True, i, j, move, exam) #Termination
+            return(True, i, j, move, exam, timeit.default_timer() - start) #Termination
         
         if dis[i][j] == 1:
             fnr = 0.2

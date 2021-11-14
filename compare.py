@@ -16,20 +16,22 @@ if result==False:
     print("Unsolvable grid")
 else:
     print("Agent 8")
-    result, i, j, move, exam = agent_8(grid, target, dim)
+    result, i, j, move, exam, time = agent_8(grid, target, dim)
     print(i,j)
     print("Move: ", move)
     print("Exam: ", exam)
-
-
+    print("Time: ", time)
+    
     print("Agent 7")
-    result, i, j, move, exam = agent_7(grid, target, dim)
+    result, i, j, move, exam, time = agent_7(grid, target, dim)
     print(i,j)
     print("Move: ", move)
     print("Exam: ", exam)
-
+    print("Time: ", time)
+    
     print("Agent 6")
-    result, i, j, move, exam = agent_6(grid, target, dim)
+    result, i, j, move, exam, time = agent_6(grid, target, dim)
     print(i,j)
     print("Move: ", move)
     print("Exam: ", exam)
+    print("Time: ", time)
