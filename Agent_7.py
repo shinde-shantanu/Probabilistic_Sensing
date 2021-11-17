@@ -28,7 +28,7 @@ def update_probability_block(p, pxy, b):
 def dist(i, j, ti, tj): #Finds Manhattan distance for (i,j) with respect to (ti,tj)
     return abs(ti-i)+abs(tj-j)
 
-def find_path(parent, ti, tj, si, sj): #Return list of tuples ass path
+def find_path(parent, ti, tj, si, sj): #Return list of tuples as path
     i,j = ti, tj
     path = [(ti, tj)]
     while (i, j) != (si, sj):

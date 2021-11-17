@@ -29,7 +29,7 @@ def update_probability_block(p, pxy, b):
 def dist(i, j, ti, tj): #Finds Manhattan distance for (i,j) with respect to (ti,tj)
     return abs(ti-i)+abs(tj-j)
 
-def find_path(parent, ti, tj, si, sj): #Return list of tuples ass path
+def find_path(parent, ti, tj, si, sj): #Return list of tuples as path
     i,j = ti, tj
     path = [(ti, tj)]
     while (i, j) != (si, sj):
@@ -74,7 +74,7 @@ def agent_8(grid, target, dim):
             for x in range(dim):
                 for y in range(dim):
                     if pf[x][y] != 0:
-                        h[x][y] = dist(x,y,i,j)/(pf[x][y] * dim * 2)
+                        h[x][y] = dist(x,y,i,j)/(pf[x][y] * dim * 2) #Dividing manhattan distances with probaility*100 to make new heuristic
                     else:
                         h[x][y] = dim ** 2
             h[i][j] = dim ** 2
